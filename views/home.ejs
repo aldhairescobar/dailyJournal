@@ -1,0 +1,30 @@
+
+<%- include("partials/header"); -%>
+
+<div class="post">
+<h1>Home</h1>
+<p><%= startingContent %></p>
+<form action="/compose">
+<button class="btn btn-info" type="submit"">New post</button>
+</form>
+</div>
+
+     <% posts.forEach(function(post){ %>
+          <div class="post">
+               <div class="post-head">
+                    <h2 class="post-title"><a class="post-title-link" href="/post/<%= post.title %>"><%= post.title %></a></h2> 
+                    <div class="forms">
+                         <form action="/edit/<%= post._id %>" method="GET">
+                              <button type="submit" class="btn btn-light">✏️</button>
+                         </form>
+                         <form action="/delete" method="POST">
+                              <input type="hidden" name="id" value="<%= post._id %>">
+                              <button type="submit" class="btn btn-light">🗑️</button>
+                         </form>
+                    </div>
+                    </div>
+               <p><%= post.content.slice(0, 100) + " ..." %></p>
+          </div>
+     <%  }) %>
+
+<%- include("partials/footer"); -%>

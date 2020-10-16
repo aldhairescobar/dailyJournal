@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* typography */
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.navbar-brand{
+  font-family: 'Berkshire Swash';
+}
+
+.post-title {
+  margin: 0.3em 0 0.9em;
+}
+
+.post-title-link {
+  color: black;
+}
+
+.post-title-link:hover,
+.post-title-link:focus {
+  color: #17a2b8;
+  text-decoration: none;
+}
+
+.forms{
+  display: flex;
+}
+
+form + form {
+  margin-left: 10px;
+}
+
+.content {
+  padding: 1em 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post,
+.container {
+  border: 1px solid rgba(27, 31, 35, 0.075);
+  margin: 1em auto;
+  border-radius: 0.3em;
+  padding: 1em;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 2em;
+}
+
+.footer p {
+  font-size: 1rem;
+}
